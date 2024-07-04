@@ -1,0 +1,53 @@
+@mixin grid-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarContainer {
+  height: 100vh;
+  .sidebar {
+    @include grid-center();
+    flex-direction: column;
+    background-color: #d9d9d9;
+    .sideImage {
+      width: 85%;
+      height: auto;
+      object-fit: contain;
+    }
+    .tagLine {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+  }
+  .authForm {
+    @include grid-center();
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0.5rem;
+    .formHead {
+      text-align: left;
+      width: 70%;
+      .formTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .formSub {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .action {
+      margin-top: 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    .link {
+      color: #38659d;
+      text-decoration: underline;
+    }
+  }
+}

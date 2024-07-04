@@ -1,0 +1,236 @@
+@mixin centerAlign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin mainTxt {
+  font-weight:500;
+  font-size: 1.2rem;
+}
+@mixin subTxt {
+  font-weight:500;
+  font-family: 1rem;
+  margin-top: 0.3rem;
+  color: #9d8e8e;
+}
+
+@mixin label {
+  font-weight:500;
+  color: #545353;
+  margin-bottom: 0.2rem;
+}
+.profileContainer {
+  padding: 1rem;
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    font-weight:500 !important;
+  }
+  .dataContainer {
+    .cardContainer {
+      .profile {
+        font-weight: 600;
+      }
+      .personalData {
+        margin-top: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .avatar {
+          margin-bottom: 1rem;
+        }
+        .staffData {
+          font-weight:500;
+          font-size: 1.2rem;
+        }
+        .staffSub {
+          font-size: 1rem;
+          font-weight:500;
+          color: #9d8e8e;
+          margin-bottom: 1rem;
+        }
+        .workData {
+          @include centerAlign();
+          flex-direction: row;
+          margin-bottom: 0.8rem;
+
+          .income {
+            @include centerAlign();
+            border-right: 1px solid #ddd;
+            .main {
+              @include mainTxt();
+            }
+            .sub {
+              @include subTxt();
+            }
+          }
+          .orders {
+            @include centerAlign();
+            font-weight:500;
+            .main {
+              @include mainTxt();
+            }
+            .sub {
+              @include subTxt();
+            }
+          }
+        }
+      }
+      .listContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 0.9rem;
+        margin-top: 1rem;
+        width: 100%;
+
+        .listBtn {
+          font-weight:500;
+          margin-bottom: 0.9rem;
+          color: #9d8e8e;
+          width: 100%;
+
+          &:global(
+              .mui-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected
+            ) {
+            color: #000;
+            background-color: initial;
+          }
+        }
+        .activeTab {
+          color: #000;
+          background-color: initial;
+        }
+      }
+      .btnContainer {
+        display: flex;
+        width: 100%;
+        .delBtn {
+          color: #c3040a;
+          text-transform: initial;
+          width: 100%;
+          margin-top: 2rem;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  .formContainer {
+    padding: 2rem 1rem;
+    .infoCopy {
+      color: #000;
+      font-weight:500;
+      margin-bottom: 1.2rem;
+    }
+    .label {
+      @include label();
+    }
+    .genderContainer {
+      width: 100%;
+      .row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+
+        .gender {
+          margin-right: 1rem;
+          span {
+            margin-right: 0.2rem;
+            font-weight:500 !important;
+
+            &:global(.mui-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked) {
+              color: #ffca40;
+            }
+          }
+        }
+      }
+    }
+    .fieldContainerRight {
+      padding-right: 0.5rem;
+    }
+    .fieldContainerLeft {
+      padding-left: 0.5rem;
+    }
+  }
+  .loginForm {
+    .label {
+      @include label();
+    }
+    .changePass {
+      display: flex;
+      width: 100%;
+      // align-items: center;
+      flex-direction: column;
+      .copy {
+        display: flex;
+        align-items: center;
+        font-weight:500;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+      .password {
+        margin-bottom: 1rem;
+        font-weight:500;
+        color: #000;
+        span {
+          color: green;
+          font-weight:600;
+        }
+        .error{
+          color: red;
+
+        }
+      }
+    }
+  }
+}
+.modalTitle {
+  font-weight:500;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.modalSub {
+  font-weight:500;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #545353;
+}
+.modalBtn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 1rem;
+
+  button {
+    width: 100%;
+    margin: 0.5rem;
+    text-transform: capitalize;
+    &:last-child {
+      background-color: #c3040a;
+    }
+  }
+}
+.modalContainer {
+  text-align: center;
+  .head {
+    font-weight:500;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .copy {
+    font-weight:500;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

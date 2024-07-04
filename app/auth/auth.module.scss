@@ -1,0 +1,31 @@
+.link {
+  color: #38659d;
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.signup {
+  &:global(.MuiPaper-root-MuiSnackbarContent-root) {
+    padding: 1rem !important;
+  }
+  .genderContainer {
+    width: 100%;
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.2rem;
+
+      .gender {
+        margin-right: 1rem;
+        span {
+          margin-right: 0.2rem;
+          font-weight: 500;
+          &:global(.mui-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked) {
+            color: #ffca40;
+          }
+        }
+      }
+    }
+  }
+}

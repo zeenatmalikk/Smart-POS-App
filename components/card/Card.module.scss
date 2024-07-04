@@ -1,0 +1,26 @@
+.Card {
+  display: flex;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  align-items: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.95);
+  }
+  &:hover {
+    box-shadow: 0 0 0 5px #eeeeee;
+    opacity: 1;
+    transform: scale(0.95);
+  }
+}
+.cardAction {
+  .name {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "__Poppins_b8bd98", "__Poppins_Fallback_b8bd98";
+  }
+}

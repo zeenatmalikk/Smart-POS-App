@@ -1,0 +1,238 @@
+.billContainer {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@mixin statusBtn {
+  width: 10rem;
+  color: #040404;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.box {
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  float: right;
+  width: 35%;
+  border-radius: 32px 0px 0px 32px;
+  padding: 32px;
+}
+.orderBox {
+  width: 40%;
+}
+.section {
+  margin: 16px;
+  font-weight: 600;
+}
+.statusButton {
+  background-color: #ffd049;
+  float: right;
+  color: black;
+  width: 120px;
+  border-radius: 4px;
+  padding: 2px;
+}
+.divider {
+  padding: 8px;
+  margin-bottom: 16px;
+}
+.row {
+  padding: 64px;
+  font-weight: bold;
+}
+.tableHeader {
+  font-weight: bolder;
+  opacity: 0.8;
+}
+
+.bills {
+  position: relative;
+  padding: 2rem 2.5rem 0 1rem;
+  .billsHead {
+    color: #040404;
+    font-weight: 500;
+    font-size: 1.9rem;
+  }
+  .details {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      .orderNo {
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+      .active {
+        @include statusBtn();
+        background-color: #ffca40;
+        color: #040404;
+      }
+      .completed {
+        @include statusBtn();
+        background-color: #008000;
+        color: #fff;
+      }
+    }
+    .detailsContainer {
+      padding: 0 0.5rem;
+      margin-top: 1rem;
+      .head {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      .customerDets {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+          font-weight: 500;
+          color: #a7a7a7;
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+        .sub {
+          font-weight: 500;
+          color: #040404;
+          font-size: 1.2rem;
+          margin-left: 0.1rem;
+        }
+      }
+      .orderInfo {
+        margin-top: 1rem;
+
+        .orderTable {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          .subs {
+            font-weight: 500;
+            color: #a7a7a7;
+            margin-top: 1rem;
+          }
+        }
+        .scrollable {
+          height: 19rem;
+          overflow: auto;
+          .orderCard {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #dadada;
+            padding: 0 0.5rem 1rem 0;
+
+            .nameContainer {
+              display: flex;
+              align-items: center;
+              .foodItem {
+                font-weight: 500;
+                margin-left: 1rem;
+              }
+              .imgContainer {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 0.7rem;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                  border-radius: 0.7rem;
+                }
+              }
+            }
+            .price {
+              display: flex;
+              justify-content: flex-end;
+              font-weight: 500;
+            }
+          }
+          .orderCard:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .scrollable::-webkit-scrollbar {
+          width: 4px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+          background-color: #a7a7a7;
+          border-radius: 0.5rem;
+        }
+      }
+      .bottomBar {
+        position: absolute;
+        bottom: 10px;
+        width: 86%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .grandtotal {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-right: 0.5rem;
+          width: 100%;
+          margin-bottom: 0.5rem;
+          .total {
+            font-weight: 500;
+          }
+        }
+        .chargeBtn {
+          width: 80%;
+          text-transform: capitalize;
+          color: #000;
+          background-color: #ffca40;
+          font-weight: 600;
+          font-family: "__Poppins_b8bd98", "__Poppins_Fallback_b8bd98";
+        }
+        .paidBtn {
+          width: 80%;
+          text-transform: capitalize;
+          color: #fff;
+          font-weight: 500;
+          font-family: "__Poppins_b8bd98", "__Poppins_Fallback_b8bd98";
+
+          background-color: #008000;
+        }
+      }
+    }
+  }
+}
+.paymentModal {
+  width: 100%;
+  .heading {
+    font-weight: 500 !important;
+    font-size: 1rem;
+    color: #040404;
+    margin-bottom: 0.5rem;
+  }
+  .btn {
+    width: 100%;
+    background-color: #ffca40;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+}

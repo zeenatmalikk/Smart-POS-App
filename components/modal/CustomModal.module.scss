@@ -1,0 +1,11 @@
+.paper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    box-shadow : 0.1rem 0.2rem 0.2rem gray;
+    padding: 24px 24px;
+    border-radius: 5px;
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+}

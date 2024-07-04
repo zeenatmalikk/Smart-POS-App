@@ -1,0 +1,27 @@
+@mixin centerAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty {
+  @include centerAlign();
+  height: 75vh;
+  flex-direction: column;
+
+  svg {
+    font-size: 7rem;
+    background-color: #ffd049;
+    padding: 2rem;
+    border-radius: 50%;
+  }
+  .info {
+    font-weight:500;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+  .desc {
+    font-weight:400;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+}

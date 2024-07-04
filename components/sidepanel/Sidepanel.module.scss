@@ -1,0 +1,74 @@
+.sidePanelContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .tabContainer {
+    padding: 1rem;
+    .tabBtn {
+      padding: 0.6rem 1rem;
+      margin-bottom: 1rem;
+      color: #000;
+      .icon {
+        color: #000;
+        > span > span {
+          background-color: #c3040a;
+        }
+      }
+      .tabTxt {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+    .tabBtn:hover {
+      border-radius: 10px;
+    }
+    .tabActiveBtn {
+      background-color: #ffd049;
+      border-radius: 10px;
+    }
+  }
+  .profileSection {
+    position: absolute;
+    bottom: 2rem;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .profileCard {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1rem;
+      border-radius: 10px;
+      .avatar {
+        height: 5rem;
+        width: 5rem;
+      }
+      .profileName {
+        font-size: 1rem;
+        margin: 0.1rem 0;
+        text-align: center;
+        font-weight: 600;
+      }
+      .desig {
+        text-align: center;
+        font-weight: 400;
+
+      }
+      .profileBtn {
+        text-transform: capitalize;
+        background-color: #ffd049;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #000;
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0.5rem 0;
+        border-radius: 10px;
+        font-family: "__Poppins_b8bd98", "__Poppins_Fallback_b8bd98";
+      }
+    }
+  }
+}
